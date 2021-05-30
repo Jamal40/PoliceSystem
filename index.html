@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/Semantic-UI-CSS-master/semantic.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/styles/Semantic-UI-CSS-master/semantic.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container main-window">
+      <img class="laptop" src="/resources/laptop.png" alt="" />
+      <div class="win-bar">
+        <i class="fas fa-window-minimize"></i>
+        &nbsp; &nbsp; &nbsp;
+        <i class="far fa-window-maximize"></i>
+        &nbsp; &nbsp; &nbsp;
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="ui five inverted item menu">
+        <a data-nav-dest="welcome" class="active violet item">Welcome</a>
+        <a data-nav-dest="cii" class="orange item">Citizen Information</a>
+        <a data-nav-dest="plate-inquiry" class="yellow item"
+          >License Plate Inquiry</a
+        >
+        <a data-nav-dest="duty-list" class="olive item">Duty List</a>
+        <a data-nav-dest="crime-database" class="pink item">Crime Database</a>
+      </div>
+      <div data-nav-name="welcome" class="content window-content welcome">
+        <h2 class="welcome-msg">Welcome to New Land City Police Computer</h2>
+        <button class="ui inverted teal button">Join it</button>
+      </div>
+      <div data-nav-name="cii" class="content window-content cii">
+        <div class="container input-container">
+          <div class="ui form success">
+            <div class="field">
+              <label>Citizen ID</label>
+              <input
+                type="text"
+                name="id"
+                placeholder="Enter the citizen ID here."
+              />
+            </div>
+            <div>
+              <button class="ui inverted green button show-info">
+                Show info
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui modal citizen-info">
+          <i class="close icon"></i>
+          <div class="header">Profile Picture</div>
+          <div class="image content">
+            <div class="ui medium image">
+              <img src="https://picsum.photos/200" />
+            </div>
+            <div class="description">
+              <p>Role Gender: &nbsp; <span class="gender">Male</span></p>
+              <p>
+                Character Entry Time: &nbsp;
+                <span class="entry-time">05/29/2021</span>
+              </p>
+              <p>
+                Total Assets: &nbsp; <span class="total-assests">1500$</span>
+              </p>
+              <div class="bank-statement">
+                <p>Bank Accout Statement:</p>
+                <table class="ui inverted blue table">
+                  <thead>
+                    <tr>
+                      <th>Number</th>
+                      <th>Object Name</th>
+                      <th>Time</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+
+              <div class="total-assets">
+                <p>Owned Vehicles:</p>
+                <table class="ui inverted blue table vehicles-table">
+                  <thead>
+                    <tr>
+                      <th>Plate</th>
+                      <th>Buying Date</th>
+                      <th>Model</th>
+                      <th>Photo</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+
+                <p>Owned Houses:</p>
+                <table class="ui inverted blue table houses-table">
+                  <thead>
+                    <tr>
+                      <th>House Type</th>
+                      <th>Buying Date</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+
+              <div class="criminal-record">
+                <p>Criminal Record:</p>
+                <table class="ui inverted blue table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Charges</th>
+                      <th>Arrested Time</th>
+                      <th>Jail Time</th>
+                      <th>Resposible Police</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="actions">
+            <div class="ui positive right labeled icon button">
+              Okay
+              <i class="checkmark icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-nav-name="plate-inquiry"
+        class="content window-content plate-inquiry"
+      >
+        <div class="ui big icon input">
+          <input type="text" placeholder="Search huge..." />
+          <i class="search icon"></i>
+        </div>
+
+        <div class="ui items inq-result">
+          <div class="item">
+            <a class="ui small image">
+              <img src="https://picsum.photos/100" />
+            </a>
+            <div class="content">
+              <p class="header-info">
+                Owner: <span class="vehicle-owner">test</span>
+              </p>
+              <p class="header-info">
+                Model: <span class="vehicle-model">test</span>
+              </p>
+              <div class="description">
+                <p>Any Additional Description is shown here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-nav-name="duty-list" class="content window-content duty-list">
+        <table class="ui inverted orange table">
+          <thead>
+            <tr>
+              <th>Officer Name</th>
+              <th>Duty</th>
+              <th>Rank</th>
+              <th>Mission Passed</th>
+              <th>Go</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div
+        data-nav-name="crime-database"
+        class="content window-content crime-database"
+      >
+        <form class="ui form">
+          <div class="two fields">
+            <div class="field">
+              <label>Suspect Name</label>
+              <input
+                type="text"
+                name="suspect_name"
+                placeholder="Suspect Name"
+              />
+            </div>
+            <div class="field">
+              <label>Crime</label>
+              <select class="ui dropdown crime-select" name="crime">
+                <option value="theft">Theft</option>
+                <option value="robbery">Robbery</option>
+                <option value="resisting_arrest">Resisting Arrest</option>
+                <option value="first_degree_murder">First Degree Murder</option>
+                <option value="second_degree_murder">
+                  Second Degree Murder
+                </option>
+                <option value="triple_murder">Triple Murder</option>
+                <option value="illegal_gathering">Illegal Gatherings</option>
+                <option value="abusing_public_officials">
+                  Abusing Public Officials
+                </option>
+                <option value="dangerous_driving">Dangerous Driving</option>
+                <option value="drunk_driving">Drunk Driving</option>
+                <option value="poison_driving">Poison Driving</option>
+                <option value="obstructing">Obstructing</option>
+                <option value="igonring_police_authority">
+                  Ignoring Police Authority
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="two fields">
+            <div class="field">
+              <label>Criminal Record</label>
+              <select class="ui dropdown crime-select" name="criminal_record">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Crime Time</label>
+              <input type="date" name="crime_date" />
+            </div>
+          </div>
+
+          <div class="two fields">
+            <div class="field">
+              <label>Recorder Officer Name</label>
+              <input
+                type="text"
+                name="officer_name"
+                placeholder="Recorder Officer Name"
+              />
+            </div>
+
+            <div class="field">
+              <label>Jail Time</label>
+              <input type="date" name="jail_time" placeholder="Jail Time" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Illegal License Plate</label>
+            <input
+              type="text"
+              name="license_plate"
+              placeholder="Illegal License Plate"
+            />
+          </div>
+          <div class="field">
+            <label>Remarks</label>
+            <textarea
+              rows="1"
+              spellcheck="false"
+              placeholder="Add any ramrks here."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="ui inverted primary button">
+            Add Crime
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

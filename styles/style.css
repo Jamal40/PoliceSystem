@@ -1,0 +1,202 @@
+* {
+  /* margin: 0;
+  padding: 0; */
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(83, 78, 78);
+}
+
+.main-window {
+  position: relative;
+  width: 70%;
+  height: 500px;
+  background-color: #222831;
+  color: #ececec;
+  border-radius: 0.28571429rem;
+}
+.win-bar {
+  position: absolute;
+  height: 23px;
+  width: 100%;
+  background-color: grey;
+  border-radius: 2px 2px 0 0;
+  top: -23px;
+  padding-right: 1em;
+  text-align: right;
+}
+.laptop {
+  display: block;
+  position: absolute;
+  width: 138%;
+  left: -19.15%;
+  height: 140%;
+  top: -11%;
+  z-index: -1;
+}
+.menu {
+  margin: 0px !important;
+}
+.window-content {
+  height: calc((100% - 2.85714286em) - 1px);
+}
+.welcome {
+  margin: 0px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../resources/police.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.welcome-msg {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.cii {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.input-container {
+  width: 80%;
+  color: white;
+}
+
+.input-container label {
+  color: white !important;
+  font-size: 1.5rem !important;
+}
+
+.ui.modal.citizen-info > .header {
+  background-color: #30475e;
+  color: white;
+  border-color: whitesmoke;
+}
+
+.ui.modal.citizen-info .actions {
+  border-top: 1px white solid;
+  background-color: #30475e;
+}
+
+.ui.modal.citizen-info > .image.content {
+  background-color: #30475e;
+  color: white;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+.ui.modal.citizen-info > .image.content > .description {
+  padding-bottom: 2em;
+  height: 100%;
+}
+.ui.modal.citizen-info > .image.content > .description span {
+  color: #f2a365 !important;
+  font-weight: bold;
+}
+
+.total-assets {
+  margin-top: 1.5em;
+}
+.criminal-record {
+  margin-top: 1.5em;
+}
+td img {
+  width: 50px;
+}
+
+/*Plate Inquiry Section*/
+.plate-inquiry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  display: none;
+}
+.plate-inquiry table {
+  width: 85% !important;
+}
+
+.inq-result {
+  width: 90% !important;
+
+  height: 0;
+  transition: height 1s;
+  overflow-y: hidden;
+}
+
+.inq-result p {
+  color: white !important;
+}
+.header-info {
+  font-size: 1.25rem;
+  font-family: "Lato";
+}
+.header-info:first-child {
+  margin-bottom: 0px !important;
+}
+.header-info span {
+  color: #f2a365;
+  font-weight: bold;
+}
+i.search.icon {
+  pointer-events: auto !important;
+}
+.search.icon:hover {
+  cursor: pointer !important;
+  background-color: #ececec;
+}
+
+/*Duty List Section*/
+.duty-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.duty-list table {
+  width: 90% !important;
+}
+
+.duty-list table i {
+  color: white;
+}
+
+.duty-list table i:hover {
+  cursor: pointer;
+}
+
+.crime-database {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.crime-database form {
+  height: 100%;
+  width: 70%;
+  overflow-y: scroll;
+  padding: 1em;
+  overflow-x: hidden;
+}
+.crime-database form button {
+  margin-bottom: 1em !important;
+}
+.crime-database label {
+  color: white !important;
+}
